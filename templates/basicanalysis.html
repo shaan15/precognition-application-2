@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8>
+	<title>PrecogTask</title>
+    <style type="text/css">
+        /*.chart {
+            height: 200px;
+        }*/
+
+        .spacer {
+            height: 1px;
+        }
+
+        #chart-A{
+            width: 50%;
+            height: 200px; /* set width to 50% of page width */
+            float: left; /* Make the element go to the left */
+        }
+
+        #chart-B{
+            width: 50%;
+            height: 200px;
+            float: right;
+        }
+        #chart-C{
+            width: 50%;
+            height: 200px; /* set width to 50% of page width */
+            float: left; /* Make the element go to the left */
+        }
+
+        #chart-D{
+            width: 50%;
+            height: 200px;
+            float: right;
+        }
+
+        #chart-E{
+            width: 50%;
+            height: 200px; /* set width to 50% of page width */
+            float: left; /* Make the element go to the left */
+        }
+
+        #chart-F{
+            width: 50%;
+            height: 200px;
+            float: right;
+        }
+        #chart-G{
+            width: 50%;
+            height: 200px; /* set width to 50% of page width */
+            float: left; /* Make the element go to the left */
+        }
+
+        #chart-H{
+            width: 50%;
+            height: 200px;
+            float: right;
+        }
+
+        #chart-I{
+            width: 50%;
+            height: 200px; /* set width to 50% of page width */
+            float: left; /* Make the element go to the left */
+        }
+
+        #chart-J{
+            width: 50%;
+            height: 200px;
+            float: right;
+        }
+        #chart-K{
+            width: 50%;
+            height: 200px; /* set width to 50% of page width */
+            float: left; /* Make the element go to the left */
+        }
+
+        #chart-L{
+            width: 50%;
+            height: 200px;
+            float: right;
+        }
+
+        #chart-M{
+            width: 50%;
+            height: 200px; /* set width to 50% of page width */
+            float: left; /* Make the element go to the left */
+        }
+
+        #chart-N{
+            width: 50%;
+            height: 200px;
+            float: right;
+        }
+        #chart-O{
+            width: 50%;
+            height: 200px; /* set width to 50% of page width */
+            float: left; /* Make the element go to the left */
+        }
+
+        #chart-P{
+            width: 50%;
+            height: 200px;
+            float: right;
+        }
+        #chart-Q{
+            width: 50%;
+            height: 200px; /* set width to 50% of page width */
+            float: left; /* Make the element go to the left */
+        }
+
+        #chart-R{
+            width: 50%;
+            height: 200px;
+            float: right;
+        }
+        #chart-S{
+            width: 50%;
+            height: 200px; /* set width to 50% of page width */
+            float: left; /* Make the element go to the left */
+        }
+
+        #chart-T{
+            width: 50%;
+            height: 200px;
+            float: right;
+        }
+        #chart-U{
+            width: 50%;
+            height: 200px; /* set width to 50% of page width */
+            float: left; /* Make the element go to the left */
+        }
+
+        #chart-V{
+            width: 50%;
+            height: 200px;
+            float: right;
+        }
+        #chart-W{
+            width: 50%;
+            height: 200px; /* set width to 50% of page width */
+            float: left; /* Make the element go to the left */
+        }
+
+        #chart-X{
+            width: 50%;
+            height: 200px;
+            float: right;
+        }
+        /*#chart-Y{
+            width: 50%;
+            height: 200px;
+            float: left;
+        }*/
+        
+
+
+    </style>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+
+
+<script src="https://code.highcharts.com/modules/wordcloud.js"></script>
+<!-- <div id="container" style="min-width: 310px; max-width: 600px; height: 400px; margin: 0 auto"></div> -->
+<div id="chart-A" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div> <!-- Container for Chart A -->
+<div class="spacer"></div>
+<div id="chart-B" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div>
+<div id="chart-C" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div> <!-- Container for Chart A -->
+<div class="spacer"></div>
+<div id="chart-D" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div>
+<div id="chart-E" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div> <!-- Container for Chart A -->
+<div class="spacer"></div>
+<div id="chart-F" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div>
+<div id="chart-G" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div> <!-- Container for Chart A -->
+<div class="spacer"></div>
+<div id="chart-H" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div>
+<div id="chart-I" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div> <!-- Container for Chart A -->
+<div class="spacer"></div>
+<div id="chart-J" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div>
+<div id="chart-K" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div> <!-- Container for Chart A -->
+<div class="spacer"></div>
+<div id="chart-L" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div>
+<div id="chart-M" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div> <!-- Container for Chart A -->
+<div class="spacer"></div>
+<div id="chart-N" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div>
+<div id="chart-O" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div> <!-- Container for Chart A -->
+<div class="spacer"></div>
+<div id="chart-P" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div>
+<div id="chart-Q" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div> <!-- Container for Chart A -->
+<div class="spacer"></div>
+<div id="chart-R" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div>
+<div id="chart-S" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div> <!-- Container for Chart A -->
+<div class="spacer"></div>
+<div id="chart-T" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div>
+<div id="chart-U" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div> <!-- Container for Chart A -->
+<div class="spacer"></div>
+<div id="chart-V" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div>
+<div id="chart-W" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div> <!-- Container for Chart A -->
+<div class="spacer"></div>
+<div id="chart-X" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div>
+
+<!-- <script src="{{url_for('static', filename='orgvsretweet.js')}}"></script> -->
+<script type="text/javascript">
+console.log("HI");
+function test(x_list,y_list,x_list_p,y_list_p,x_list_v,y_list_v,x_list_u,y_list_u,x_list_s,y_list_s,x_list_um,y_list_um,x_list_c,y_list_c,words,count,m_words,m_count,posts,usersids,m_posts,m_usersids,allposts,favs,m_allposts,m_favs,x_list_fo,y_list_fo,kd,vd,m_kd,m_vd){
+ // console.log(data);
+ console.log("kabfa");
+    console.log(x_list);
+    new Highcharts.chart('chart-A', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: 'Original Tweets vs Retweeted tweets'
+    },
+    subtitle: {
+        text: 'Delhi Air Pollution'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        series: {
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                // format: '{point.name}: {point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.percentage:.1f}%</b>'
+    },
+    series: [{
+        name: 'Tweets',
+        colorByPoint: true,
+        data: [{
+            name: 'Retweeted Tweets',
+            y: x_list[1],
+            drilldown: 'Retweeted Tweets'
+        }, {
+            name: 'Original Tweets',
+            y: x_list[0],
+            
+            drilldown: 'Original Tweets'
+        }]
+    }],
+    drilldown: {
+        series: [{
+            name: 'Retweeted Tweets',
+            id: 'Retweeted tweets',
+            
+        }, {
+            name: 'Original Tweets',
+            id: 'Original tweets',
+            
+        }]
+    }
+});
+
+new Highcharts.chart('chart-B', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: 'Original Tweets vs Retweeted tweets'
+    },
+    subtitle: {
+        text: 'Mumbai Cyclone'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        series: {
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                // format: '{point.name}: {point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.percentage:.1f}%</b>'
+    },
+    series: [{
+        name: 'Tweets',
+        colorByPoint: true,
+        data: [{
+            name: 'Retweeted Tweets',
+            y: y_list[1],
+            drilldown: 'Retweeted Tweets'
+        }, {
+            name: 'Original Tweets',
+            y: y_list[0],
+            
+            drilldown: 'Original Tweets'
+        }]
+    }],
+    drilldown: {
+        series: [{
+            name: 'Retweeted Tweets',
+            id: 'Retweeted tweets',
+            
+        }, {
+            name: 'Original Tweets',
+            id: 'Original tweets',
+            
+        }]
+    }
+});
+
+    new Highcharts.chart('chart-C', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: 'Tweets containing photos vs not'
+    },
+    subtitle: {
+        text: 'Delhi Air Pollution'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        series: {
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                // format: '{point.name}: {point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.percentage:.1f}%</b>'
+    },
+    series: [{
+        name: 'Tweets',
+        colorByPoint: true,
+        data: [{
+            name: 'photos',
+            y: x_list[0],
+            drilldown: 'photos'
+        }, {
+            name: 'No photos',
+            y: x_list[1],
+            
+            drilldown: 'No photos'
+        }]
+    }],
+    drilldown: {
+        series: [{
+            name: 'photos',
+            id: 'photos',
+            
+        }, {
+            name: 'No photos',
+            id: 'No photos',
+            
+        }]
+    }
+});
+
+
+new Highcharts.chart('chart-D', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: 'Tweets containing photos vs not'
+    },
+    subtitle: {
+        text: 'Mumbai Cyclone'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        series: {
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                // format: '{point.name}: {point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.percentage:.1f}%</b>'
+    },
+    series: [{
+        name: 'Tweets',
+        colorByPoint: true,
+        data: [{
+            name: 'photos',
+            y: y_list[0],
+            drilldown: 'photos'
+        }, {
+            name: 'No photos',
+            y: y_list[1],
+            
+            drilldown: 'No photos'
+        }]
+    }],
+    drilldown: {
+        series: [{
+            name: 'photos',
+            id: 'photos',
+            
+        }, {
+            name: 'No photos',
+            id: 'No photos',
+            
+        }]
+    }
+});
+
+    new Highcharts.chart('chart-E', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: 'Tweets containing videos vs not'
+    },
+    subtitle: {
+        text: 'Delhi Air Pollution'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        series: {
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                // format: '{point.name}: {point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.percentage:.1f}%</b>'
+    },
+    series: [{
+        name: 'Tweets',
+        colorByPoint: true,
+        data: [{
+            name: 'videos',
+            y: x_list_v[0],
+            drilldown: 'videos'
+        }, {
+            name: 'No videos',
+            y: x_list_v[1],
+            
+            drilldown: 'No videos'
+        }]
+    }],
+    drilldown: {
+        series: [{
+            name: 'videos',
+            id: 'videos',
+            
+        }, {
+            name: 'No videos',
+            id: 'No videos',
+            
+        }]
+    }
+});
+
+    new Highcharts.chart('chart-F', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: 'Tweets containing videos vs not'
+    },
+    subtitle: {
+        text: 'Mumbai Cyclone'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        series: {
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                // format: '{point.name}: {point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.percentage:.1f}%</b>'
+    },
+    series: [{
+        name: 'Tweets',
+        colorByPoint: true,
+        data: [{
+            name: 'videos',
+            y: y_list_v[0],
+            drilldown: 'videos'
+        }, {
+            name: 'No videos',
+            y: y_list_v[1],
+            
+            drilldown: 'No videos'
+        }]
+    }],
+    drilldown: {
+        series: [{
+            name: 'videos',
+            id: 'videos',
+            
+        }, {
+            name: 'No videos',
+            id: 'No videos',
+            
+        }]
+    }
+});
+
+    new Highcharts.chart('chart-G', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: 'Tweets containing URLs vs not'
+    },
+    subtitle: {
+        text: 'Delhi Air Pollution'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        series: {
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                // format: '{point.name}: {point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.percentage:.1f}%</b>'
+    },
+    series: [{
+        name: 'Tweets',
+        colorByPoint: true,
+        data: [{
+            name: 'URLs',
+            y: x_list_u[0],
+            drilldown: 'URLs'
+        }, {
+            name: 'No URLs',
+            y: x_list_u[1],
+            
+            drilldown: 'No URLs'
+        }]
+    }],
+    drilldown: {
+        series: [{
+            name: 'URLs',
+            id: 'URLs',
+            
+        }, {
+            name: 'No URLs',
+            id: 'No URLs',
+            
+        }]
+    }
+});
+
+    new Highcharts.chart('chart-H', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: 'Tweets containing URLs vs not'
+    },
+    subtitle: {
+        text: 'Mumbai Cyclone'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        series: {
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                // format: '{point.name}: {point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.percentage:.1f}%</b>'
+    },
+    series: [{
+        name: 'Tweets',
+        colorByPoint: true,
+        data: [{
+            name: 'URLs',
+            y: y_list_u[0],
+            drilldown: 'URLs'
+        }, {
+            name: 'No URLs',
+            y: y_list_u[1],
+            
+            drilldown: 'No URLs'
+        }]
+    }],
+    drilldown: {
+        series: [{
+            name: 'URLs',
+            id: 'URLs',
+            
+        }, {
+            name: 'No URLs',
+            id: 'No URLs',
+            
+        }]
+    }
+});
+
+new Highcharts.chart('chart-I', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: 'Tweets containing symbols vs not'
+    },
+    subtitle: {
+        text: 'Delhi Air Pollution'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        series: {
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                // format: '{point.name}: {point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.percentage:.1f}%</b>'
+    },
+    series: [{
+        name: 'Tweets',
+        colorByPoint: true,
+        data: [{
+            name: 'symbols',
+            y: x_list_s[0],
+            drilldown: 'symbols'
+        }, {
+            name: 'No symbols',
+            y: x_list_s[1],
+            
+            drilldown: 'No symbols'
+        }]
+    }],
+    drilldown: {
+        series: [{
+            name: 'symbols',
+            id: 'symbols',
+            
+        }, {
+            name: 'No symbols',
+            id: 'No symbols',
+            
+        }]
+    }
+});
+
+new Highcharts.chart('chart-J', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: 'Tweets containing symbols vs not'
+    },
+    subtitle: {
+        text: 'Mumbai Cyclone'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        series: {
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                // format: '{point.name}: {point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.percentage:.1f}%</b>'
+    },
+    series: [{
+        name: 'Tweets',
+        colorByPoint: true,
+        data: [{
+            name: 'symbols',
+            y: y_list_s[0],
+            drilldown: 'symbols'
+        }, {
+            name: 'No symbols',
+            y: y_list_s[1],
+            
+            drilldown: 'No symbols'
+        }]
+    }],
+    drilldown: {
+        series: [{
+            name: 'symbols',
+            id: 'symbols',
+            
+        }, {
+            name: 'No symbols',
+            id: 'No symbols',
+            
+        }]
+    }
+});
+
+new Highcharts.chart('chart-K', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: 'Tweets containing user mentions vs not'
+    },
+    subtitle: {
+        text: 'Delhi Air Pollution'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        series: {
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                // format: '{point.name}: {point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.percentage:.1f}%</b>'
+    },
+    series: [{
+        name: 'Tweets',
+        colorByPoint: true,
+        data: [{
+            name: 'user mentions',
+            y: x_list_um[0],
+            drilldown: 'user mentions'
+        }, {
+            name: 'No user mentions',
+            y: x_list_um[1],
+            
+            drilldown: 'No user mentions'
+        }]
+    }],
+    drilldown: {
+        series: [{
+            name: 'user mentions',
+            id: 'user mentions',
+            
+        }, {
+            name: 'No user mentions',
+            id: 'No user mentions',
+            
+        }]
+    }
+});
+
+new Highcharts.chart('chart-L', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: 'Tweets containing user mentions vs not'
+    },
+    subtitle: {
+        text: 'Mumbai Cyclone'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        series: {
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                // format: '{point.name}: {point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.percentage:.1f}%</b>'
+    },
+    series: [{
+        name: 'Tweets',
+        colorByPoint: true,
+        data: [{
+            name: 'user mentions',
+            y: y_list_um[0],
+            drilldown: 'user mentions'
+        }, {
+            name: 'No user mentions',
+            y: y_list_um[1],
+            
+            drilldown: 'No user mentions'
+        }]
+    }],
+    drilldown: {
+        series: [{
+            name: 'user mentions',
+            id: 'user mentions',
+            
+        }, {
+            name: 'No user mentions',
+            id: 'No user mentions',
+            
+        }]
+    }
+});
+    
+new Highcharts.chart('chart-M', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: 'Distribution of Type of Tweet'
+    },
+    subtitle: {
+        text: 'Delhi Air Pollution'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        series: {
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                // format: '{point.name}: {point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.percentage:.1f}%</b>'
+    },
+    series: [{
+        name: 'Tweets',
+        colorByPoint: true,
+        data: [{
+            name: 'Only text',
+            y: x_list_c[0],
+            drilldown: 'Only text'
+        }, {
+            name: 'Only media',
+            y: x_list_c[1],
+            
+            drilldown: 'Only media'
+        }, {
+            name: 'Both',
+            y: x_list_c[2],
+            
+            drilldown: 'Both'
+        }]
+    }],
+    series: [{
+        name: 'Tweets',
+        colorByPoint: true,
+        data: [{
+            name: 'Only text',
+            y: x_list_c[0]
+        }, {
+            name: 'Only media',
+            y: x_list_c[1]
+        }, {
+            name: 'Both',
+            y: x_list_c[2]
+        }]
+    }]
+}); 
+
+new Highcharts.chart('chart-N', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: 'Distribution of Type of Tweet'
+    },
+    subtitle: {
+        text: 'Mumbai Cyclone'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        series: {
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                // format: '{point.name}: {point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.percentage:.1f}%</b>'
+    },
+    series: [{
+        name: 'Tweets',
+        colorByPoint: true,
+        data: [{
+            name: 'Only text',
+            y: y_list_c[0],
+            drilldown: 'Only text'
+        }, {
+            name: 'Only media',
+            y: y_list_c[1],
+            
+            drilldown: 'Only media'
+        }, {
+            name: 'Both',
+            y: y_list_c[2],
+            
+            drilldown: 'Both'
+        }]
+    }],
+    series: [{
+        name: 'Tweets',
+        colorByPoint: true,
+        data: [{
+            name: 'Only text',
+            y: y_list_c[0]
+        }, {
+            name: 'Only media',
+            y: y_list_c[1]
+        }, {
+            name: 'Both',
+            y: y_list_c[2]
+        }]
+    }]
+}); 
+
+new Highcharts.chart('chart-O', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: '10 most frequntly used hashtags'
+    },
+    subtitle: {
+        text: 'Delhi Air Pollution'
+    },
+    xAxis: {
+        categories: words,
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'frequency'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'hashtags',
+        data: count
+
+    }]
+});
+
+new Highcharts.chart('chart-P', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: '10 most frequntly used hashtags'
+    },
+    subtitle: {
+        text: 'Mumbai Cyclone'
+    },
+    xAxis: {
+        categories: m_words,
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'frequency'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'hashtags',
+        data: m_count
+
+    }]
+});
+
+new Highcharts.chart('chart-Q', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Activity of non-Delhi users'
+    },
+    subtitle: {
+        text: 'Delhi Air Pollution'
+
+    },
+    xAxis: {
+        categories: usersids,
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Activity level'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'number of posts in database',
+        data: posts
+
+    }]
+});
+
+new Highcharts.chart('chart-R', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Activity of non-Mumbai users'
+    },
+    subtitle: {
+        text: 'Mumbai Cyclone'
+
+    },
+    xAxis: {
+        categories: m_usersids,
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Activity level'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'number of posts in database',
+        data: m_posts
+
+    }]
+});
+
+new Highcharts.chart('chart-S', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Activity of non-Delhi users'
+    },
+    subtitle: {
+        text: 'Delhi Air Pollution'
+
+    },
+    xAxis: {
+        categories: usersids,
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Activity level'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Total posts',
+        data: allposts
+
+    }, {
+        name: 'Favourite count',
+        data: favs
+
+    }]
+});
+
+new Highcharts.chart('chart-T', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Activity of non-Mumbai users'
+    },
+    subtitle: {
+        text: 'Mumbai Cyclone'
+
+    },
+    xAxis: {
+        categories: m_usersids,
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Activity level'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Total posts',
+        data: m_allposts
+
+    }, {
+        name: 'Favourite count',
+        data: m_favs
+
+    }]
+});
+
+new Highcharts.chart('chart-W', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: 'Favourite count distribution on Original tweets'
+    },
+    subtitle: {
+        text: 'Delhi Air Pollution'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        series: {
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                // format: '{point.name}: {point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.percentage:.1f}%</b>'
+    },
+    series: [{
+        name: 'Tweets',
+        colorByPoint: true,
+        data: [{
+            name: 'Less than 20 likes',
+            y: x_list_fo[0],
+            drilldown: 'Less than 20 likes'
+        }, {
+            name: 'Between 20-40 likes',
+            y: x_list_fo[1],
+            
+            drilldown: 'Between 20-40 likes'
+        }, {
+            name: 'Between 40-60 likes',
+            y: x_list_fo[2],
+            
+            drilldown: 'Between 40-60 likes'
+        }, {
+            name: 'Between 60-80 likes',
+            y: x_list_fo[3],
+            
+            drilldown: 'Between 60-80 likes'
+        }, {
+            name: 'Between 80-100 likes',
+            y: x_list_fo[4],
+            
+            drilldown: 'Between 80-100 likes'
+        }, {
+            name: '100 and more likes',
+            y: x_list_fo[5],
+            
+            drilldown: '100 and more likes'
+        }]
+    }],
+    series: [{
+        name: 'Tweets',
+        colorByPoint: true,
+        data: [{
+            name: 'Less than 20 likes',
+            y: x_list_fo[0]
+        }, {
+            name: 'Between 20-40 likes',
+            y: x_list_fo[1]
+        }, {
+            name: 'Between 40-60 likes',
+            y: x_list_fo[2]
+        }, {
+            name: 'Between 60-80 likes',
+            y: x_list_fo[3]
+        }, {
+            name: 'Between 80-100 likes',
+            y: x_list_fo[4]
+        }, {
+            name: '100 and more likes',
+            y: x_list_fo[5]
+        }]
+    }]
+});
+
+new Highcharts.chart('chart-X', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: 'Favourite count distribution on Original tweets'
+    },
+    subtitle: {
+        text: 'Mumbai Cyclone'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        series: {
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                // format: '{point.name}: {point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.percentage:.1f}%</b>'
+    },
+    series: [{
+        name: 'Tweets',
+        colorByPoint: true,
+        data: [{
+            name: 'Less than 20 likes',
+            y: y_list_fo[0],
+            drilldown: 'Less than 20 likes'
+        }, {
+            name: 'Between 20-40 likes',
+            y: y_list_fo[1],
+            
+            drilldown: 'Between 20-40 likes'
+        }, {
+            name: 'Between 40-60 likes',
+            y: y_list_fo[2],
+            
+            drilldown: 'Between 40-60 likes'
+        }, {
+            name: 'Between 60-80 likes',
+            y: y_list_fo[3],
+            
+            drilldown: 'Between 60-80 likes'
+        }, {
+            name: 'Between 80-100 likes',
+            y: y_list_fo[4],
+            
+            drilldown: 'Between 80-100 likes'
+        }, {
+            name: '100 and more likes',
+            y: y_list_fo[5],
+            
+            drilldown: '100 and more likes'
+        }]
+    }],
+    series: [{
+        name: 'Tweets',
+        colorByPoint: true,
+        data: [{
+            name: 'Less than 20 likes',
+            y: y_list_fo[0]
+        }, {
+            name: 'Between 20-40 likes',
+            y: y_list_fo[1]
+        }, {
+            name: 'Between 40-60 likes',
+            y: y_list_fo[2]
+        }, {
+            name: 'Between 60-80 likes',
+            y: y_list_fo[3]
+        }, {
+            name: 'Between 80-100 likes',
+            y: y_list_fo[4]
+        }, {
+            name: '100 and more likes',
+            y: y_list_fo[5]
+        }]
+    }]
+}); 
+
+new Highcharts.chart('chart-U', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Activity of non-Delhi users'
+    },
+    subtitle: {
+        text: 'Delhi Air Pollution'
+    },
+    xAxis: {
+        categories: kd,
+        crosshair: true,
+        title: {
+            text: 'Dates'
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'frequency of tweets'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'tweets',
+        data: vd
+
+    }]
+});
+
+new Highcharts.chart('chart-V', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Activity of non-Mumbai users'
+    },
+    subtitle: {
+        text: 'Mumbai Cyclone'
+    },
+    xAxis: {
+        categories: m_kd,
+        crosshair: true,
+        title: {
+            text: 'Dates'
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'frequency of tweets'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'tweets',
+        data: m_vd
+
+    }]
+});
+
+// var lines = allwords.split(/[,\. ]+/g),
+//     data = new Highcharts.reduce(lines, function (arr, word) {
+//         var obj = new Highcharts.find(arr, function (obj) {
+//             return obj.name === word;
+//         });
+//         if (obj) {
+//             obj.weight += 1;
+//         } else {
+//             obj = {
+//                 name: word,
+//                 weight: 1
+//             };
+//             arr.push(obj);
+//         }
+//         return arr;
+//     }, []);
+
+// new Highcharts.chart('chart-Y', {
+//     series: [{
+//         type: 'wordcloud',
+//         data: data,
+//         name: 'Occurrences'
+//     }],
+//     title: {
+//         text: 'Wordcloud'
+//     }
+// });
+
+  console.log("kabfa");
+}
+
+	test({{x_list|safe}},{{y_list|safe}},{{x_list_p|safe}},{{y_list_p|safe}},{{x_list_v|safe}},{{y_list_v|safe}},{{x_list_u|safe}},{{y_list_u|safe}},{{x_list_s|safe}},{{y_list_s|safe}},{{x_list_um|safe}},{{y_list_um|safe}},{{x_list_c|safe}},{{y_list_c|safe}},{{words|safe}},{{count|safe}},{{m_words|safe}},{{m_count|safe}},{{posts|safe}},{{usersids|safe}},{{m_posts|safe}},{{m_usersids|safe}},{{allposts|safe}},{{favs|safe}},{{m_allposts|safe}},{{m_favs|safe}},{{x_list_fo|safe}},{{y_list_fo|safe}},{{kd|safe}},{{vd|safe}},{{m_kd|safe}},{{m_vd|safe}});
+console.log("HI1");
+</script>
+<a href="{{url_for('geoplots_delhi')}}"><p style="text-align:right">DELHI GEO-PLOTS --></p></a>
+</body>
+</html>

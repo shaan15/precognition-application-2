@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>PrecogTask</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>PrecogTask</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 90%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 90%;
+        width: 100%;
+        /*margin: 10000;*/
+        padding: 40;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+    // var lats=0.0, longs=0.0;
+      function initMap() {
+        console.log("hi");
+
+        var la={{lats|safe}};
+        var lo={{longs|safe}};
+        console.log(la.length);
+        var myLatLng = {lat: la[0], lng: lo[0]};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: myLatLng
+        });
+        for(i=0;i<la.length;i++){
+            var marker = new google.maps.Marker({
+            position: {lat: la[i], lng: lo[i]},
+            map: map
+            });
+          
+        }
+        
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC3bT2qf6kaFDfEWw5vMv9C2qEMbF9YF8&callback=initMap">
+    </script>
+    <a href="{{url_for('geoplots_delhi')}}"><p style="text-align:center;"><--TO DELHI GEO-PLOTS</p></a>
+    <a href="{{url_for('reply_delhi')}}"><p style="text-align:center;">TO DELHI REPLY NETWORK --></p></a>
+  </body>
+</html>
