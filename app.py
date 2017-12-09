@@ -441,4 +441,4 @@ def um_mumbai():
 	return render_template('um_mumbai.html')
 
 if __name__ == '__main__':
-	app.run(debug=True) 
+	app.run(debug=True,host='0.0.0.0') 
