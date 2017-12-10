@@ -42,4 +42,6 @@ STEPS TO RUN THE CODE:
 Heroku application link: https://precog-application-2.herokuapp.com/
 Tried hosting application on Heroku but given link above gives application error as mongodb addon on Heroku is paid, hence was unable to use that.
 
-Used ngrok to expose local server
+Used ngrok to expose local server: 
+https://d2884e70.ngrok.io/
+http://d2884e70.ngrok.io

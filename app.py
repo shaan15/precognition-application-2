@@ -89,6 +89,8 @@ allwords=[]
 for tweet in tweets:
 	count+=1
 	tokens=re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)"," ",tweet['text']).split()
+	tokens=' '.join(tokens)
+	tokens=re.sub("RT|https|http"," ",tweet['text']).split()
 	for to in tokens:
 		allwords.append(to)
 	ent=tweet['entities']
@@ -259,6 +261,8 @@ m_allwords=[]
 for tweet in m_tweets:
 	m_count+=1
 	tokens=re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)"," ",tweet['text']).split()
+	tokens=' '.join(tokens)
+	tokens=re.sub("RT|https|http"," ",tweet['text']).split()
 	for to in tokens:
 		m_allwords.append(to)
 	ent=tweet['entities']
@@ -400,7 +404,12 @@ for k in m_kd:
 allwords=' '.join(allwords)
 m_allwords=' '.join(m_allwords)
 
-print allwords
+# print allwords
+
+with open('delhi_words.txt','w') as f:
+	f.write(allwords.encode('utf-8'))
+with open('mumbai_words.txt','w') as f:
+	f.write(m_allwords.encode('utf-8'))
 
 #FLASK PART
 @app.route('/')

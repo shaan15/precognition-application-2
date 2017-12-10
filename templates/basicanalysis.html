@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset=utf-8>
-	<title>PrecogTask</title>
+    <title>PrecogTask</title>
     <style type="text/css">
         /*.chart {
             height: 200px;
@@ -10,6 +10,10 @@
 
         .spacer {
             height: 1px;
+        }
+
+        .spacer2 {
+            height: 5300px;
         }
 
         #chart-A{
@@ -147,11 +151,16 @@
             height: 200px;
             float: right;
         }
-        /*#chart-Y{
+        #chart-Y{
             width: 50%;
-            height: 200px;
+            height: 350px;
             float: left;
-        }*/
+        }
+        #chart-Z{
+            width: 50%;
+            height: 350px;
+            float: right;
+        }
         
 
 
@@ -159,12 +168,16 @@
 </head>
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
 <script src="https://code.highcharts.com/modules/drilldown.js"></script>
-
+<!-- <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+<script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+        ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script> -->
 
 <script src="https://code.highcharts.com/modules/wordcloud.js"></script>
+
+<!-- <div id="container"></div> -->
 <!-- <div id="container" style="min-width: 310px; max-width: 600px; height: 400px; margin: 0 auto"></div> -->
 <div id="chart-A" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div> <!-- Container for Chart A -->
 <div class="spacer"></div>
@@ -202,7 +215,11 @@
 <div id="chart-W" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div> <!-- Container for Chart A -->
 <div class="spacer"></div>
 <div id="chart-X" class="chart" style="width: 700px; height: 400px; margin: 0 auto"></div>
-
+<div id="chart-Y" ><img src="../static/delhi_poll.jpg" alt="Pollution" width="700" height="500"></div> <!-- Container for Chart A -->
+<div class="spacer"></div>
+<div id="chart-Z"><img src="../static/mumbai_cyclone.jpg" alt="Cyclone" width="700" height="500"></div>
+<div class="spacer2"></div>
+<a href="{{url_for('geoplots_delhi')}}"><p style="text-align:center">DELHI GEO-PLOTS --></p></a>
 <!-- <script src="{{url_for('static', filename='orgvsretweet.js')}}"></script> -->
 <script type="text/javascript">
 console.log("HI");
@@ -1501,6 +1518,31 @@ new Highcharts.chart('chart-V', {
     }]
 });
 
+// var myConfig = {
+//   type: 'wordcloud',
+//   options: {
+//     text: allwords,
+//   }
+// };
+ 
+// zingchart.render({ 
+//     id: 'chart-Y', 
+//     data: myConfig 
+
+// });
+
+// var m_myConfig = {
+//   type: 'wordcloud',
+//   options: {
+//     text: m_allwords,
+//   }
+// };
+ 
+// zingchart.render({ 
+//     id: 'chart-Z', 
+//     data: m_myConfig 
+// });
+
 // var lines = allwords.split(/[,\. ]+/g),
 //     data = new Highcharts.reduce(lines, function (arr, word) {
 //         var obj = new Highcharts.find(arr, function (obj) {
@@ -1532,9 +1574,9 @@ new Highcharts.chart('chart-V', {
   console.log("kabfa");
 }
 
-	test({{x_list|safe}},{{y_list|safe}},{{x_list_p|safe}},{{y_list_p|safe}},{{x_list_v|safe}},{{y_list_v|safe}},{{x_list_u|safe}},{{y_list_u|safe}},{{x_list_s|safe}},{{y_list_s|safe}},{{x_list_um|safe}},{{y_list_um|safe}},{{x_list_c|safe}},{{y_list_c|safe}},{{words|safe}},{{count|safe}},{{m_words|safe}},{{m_count|safe}},{{posts|safe}},{{usersids|safe}},{{m_posts|safe}},{{m_usersids|safe}},{{allposts|safe}},{{favs|safe}},{{m_allposts|safe}},{{m_favs|safe}},{{x_list_fo|safe}},{{y_list_fo|safe}},{{kd|safe}},{{vd|safe}},{{m_kd|safe}},{{m_vd|safe}});
+    test({{x_list|safe}},{{y_list|safe}},{{x_list_p|safe}},{{y_list_p|safe}},{{x_list_v|safe}},{{y_list_v|safe}},{{x_list_u|safe}},{{y_list_u|safe}},{{x_list_s|safe}},{{y_list_s|safe}},{{x_list_um|safe}},{{y_list_um|safe}},{{x_list_c|safe}},{{y_list_c|safe}},{{words|safe}},{{count|safe}},{{m_words|safe}},{{m_count|safe}},{{posts|safe}},{{usersids|safe}},{{m_posts|safe}},{{m_usersids|safe}},{{allposts|safe}},{{favs|safe}},{{m_allposts|safe}},{{m_favs|safe}},{{x_list_fo|safe}},{{y_list_fo|safe}},{{kd|safe}},{{vd|safe}},{{m_kd|safe}},{{m_vd|safe}});
 console.log("HI1");
 </script>
-<a href="{{url_for('geoplots_delhi')}}"><p style="text-align:right">DELHI GEO-PLOTS --></p></a>
+
 </body>
 </html>
