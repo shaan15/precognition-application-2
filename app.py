@@ -1,4 +1,4 @@
-from pymongo import MongoClient
+# from pymongo import MongoClient
 import json
 import operator 
 from datetime import datetime
@@ -14,18 +14,32 @@ from flask import Flask
 import re
 app = Flask(__name__)
 
-client=MongoClient('localhost',27017)
-db=client['precog_ip']
-collection=db['delhi_tweets']
-collection1=db['mumbai_tweet']
+# client=MongoClient('localhost',27017)
+# db=client['precog_ip']
+# collection=db['delhi_tweets']
+# collection1=db['mumbai_tweet']
 
+# tweets=[]
+# for tweet in collection.find().batch_size(400000):
+# 	tweets.append(tweet)
+
+# m_tweets=[]
+# for tweet in collection1.find().batch_size(400000):
+# 	m_tweets.append(tweet)
+
+f = open('./dump/delhi_tweets.json','r')
+f1 = open('./dump/mumbai_tweet.json','r')
 tweets=[]
-for tweet in collection.find().batch_size(400000):
-	tweets.append(tweet)
+for x in f.readlines():
+	data = json.loads(x)
+	tweets.append(data)
+print tweets[0]
 
 m_tweets=[]
-for tweet in collection1.find().batch_size(400000):
-	m_tweets.append(tweet)
+for x in f1.readlines():
+	data = json.loads(x)
+	m_tweets.append(data)
+# print tweets[0]
 
 #DELHI NOW!!!
 original=0

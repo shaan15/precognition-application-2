@@ -1,1 +1,1 @@
-web: gunicorn precog.app:app
+web: gunicorn app:app
