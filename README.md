@@ -36,6 +36,10 @@ STEPS TO RUN THE CODE:
 
 1. pip freeze requirements.txt - this installs all the required libraries, if not present on your system.
 2. import database dump to mongo
-3. python new_app.py - runs the flask server and displays the content.
-4. Open 127.0.0.1:5000 to view the webapp.
+3. python app.py - runs the flask server and displays the content.
+4. Open 127.0.0.1:8000 to view the webapp.
 
+Heroku application link: https://precog-application-2.herokuapp.com/
+Tried hosting application on Heroku but given link above gives application error as mongodb addon on Heroku is paid, hence was unable to use that.
+
+Used ngrok to expose local server
