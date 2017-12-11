@@ -28,17 +28,13 @@ app = Flask(__name__)
 # 	m_tweets.append(tweet)
 
 f = open('./dump/delhi_tweets.json','r')
-f1 = open('./dump/mumbai_tweet.json','r')
 tweets=[]
 for x in f.readlines():
 	data = json.loads(x)
 	tweets.append(data)
 print tweets[0]
 
-m_tweets=[]
-for x in f1.readlines():
-	data = json.loads(x)
-	m_tweets.append(data)
+
 # print tweets[0]
 
 #DELHI NOW!!!
@@ -211,8 +207,13 @@ for u,v in user2tweets.iteritems():
 			favs.append(tweet['user']['favourites_count'])
 			status.append(tweet['user']['statuses_count'])
 			break
-
+tweets=[]
 #MUMBAI NOW!!!
+f1 = open('./dump/mumbai_tweet.json','r')
+m_tweets=[]
+for x in f1.readlines():
+	data = json.loads(x)
+	m_tweets.append(data)
 
 m_original=0
 m_retweets=0
@@ -417,13 +418,13 @@ for k in m_kd:
 
 allwords=' '.join(allwords)
 m_allwords=' '.join(m_allwords)
-
+m_tweets=[]
 # print allwords
 
-with open('delhi_words.txt','w') as f:
-	f.write(allwords.encode('utf-8'))
-with open('mumbai_words.txt','w') as f:
-	f.write(m_allwords.encode('utf-8'))
+# with open('delhi_words.txt','w') as f:
+# 	f.write(allwords.encode('utf-8'))
+# with open('mumbai_words.txt','w') as f:
+# 	f.write(m_allwords.encode('utf-8'))
 
 #FLASK PART
 @app.route('/')
