@@ -1,4 +1,4 @@
-# from pymongo import MongoClient
+from pymongo import MongoClient
 import json
 import operator 
 from datetime import datetime
@@ -14,26 +14,31 @@ from flask import Flask
 import re
 app = Flask(__name__)
 
-# client=MongoClient('localhost',27017)
-# db=client['precog_ip']
-# collection=db['delhi_tweets']
-# collection1=db['mumbai_tweet']
+client=MongoClient('localhost',27017)
+db=client['precog_ip']
+collection=db['delhi_tweets']
+collection1=db['mumbai_tweet']
 
-# tweets=[]
-# for tweet in collection.find().batch_size(400000):
-# 	tweets.append(tweet)
-
-# m_tweets=[]
-# for tweet in collection1.find().batch_size(400000):
-# 	m_tweets.append(tweet)
-
-f = open('./dump/delhi_tweets.json','r')
 tweets=[]
-for x in f.readlines():
-	data = json.loads(x)
-	tweets.append(data)
-print tweets[0]
+for tweet in collection.find().batch_size(400000):
+	tweets.append(tweet)
 
+m_tweets=[]
+for tweet in collection1.find().batch_size(400000):
+	m_tweets.append(tweet)
+
+# f = open('./dump/delhi_tweets.json','r')
+# tweets=[]
+# for x in f.readlines():
+# 	data = json.loads(x)
+# 	tweets.append(data)
+# print tweets[0]
+
+# f1 = open('./dump/mumbai_tweet.json','r')
+# m_tweets=[]
+# for x in f1.readlines():
+# 	data = json.loads(x)
+# 	m_tweets.append(data)
 
 # print tweets[0]
 
@@ -209,11 +214,6 @@ for u,v in user2tweets.iteritems():
 			break
 tweets=[]
 #MUMBAI NOW!!!
-f1 = open('./dump/mumbai_tweet.json','r')
-m_tweets=[]
-for x in f1.readlines():
-	data = json.loads(x)
-	m_tweets.append(data)
 
 m_original=0
 m_retweets=0
@@ -463,4 +463,4 @@ def um_mumbai():
 	return render_template('um_mumbai.html')
 
 if __name__ == '__main__':
-	app.run(debug=True) 
+	app.run(debug=True,port=8000) 
